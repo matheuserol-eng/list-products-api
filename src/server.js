@@ -1,9 +1,10 @@
 import { createApp } from "./app.js"
+import { env } from "./config/env.js"
 
 const bootstrap = async () => {
     const app = createApp()
 
-    app.listen(3333, () => console.log(`HTTP on : ${3333}`))
+    app.listen(env.port, () => console.log(`HTTP on : ${env.port}`))
 
 }
 
