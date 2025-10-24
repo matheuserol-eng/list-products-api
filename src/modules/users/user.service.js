@@ -1,5 +1,6 @@
-import { HttpError } from "../../../utils/httpError"
+
 import { env } from "../../config/env"
+import { HttpError } from "../../utils/httpError"
 import { makeUserRepoMemory } from "./user.repo.memory"
 
 export const makeUserService = () => {
