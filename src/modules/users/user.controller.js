@@ -34,6 +34,6 @@ export const makeUserController = () => {
     }
      //array handler: middleware + handler
     const me = [ensureAuth, async (request, response)=>
-       response.json({ userId: request.use.id })]
+       response.json({ userId: request.user.id })]
     return { register, login, me }
 }

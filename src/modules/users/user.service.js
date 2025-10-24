@@ -1,4 +1,7 @@
 
+import bcrypt from "bcryptjs"
+import jwt from "jsonwebtoken"
+
 import { env } from "../../config/env.js"
 import { HttpError } from "../../utils/httpError.js"
 import { makeUserRepoMemory } from "./user.repo.memory.js"
@@ -10,7 +13,7 @@ export const makeUserService = () => {
         const exists = await repo.findByEmail(email)
 
         if (exists) {
-            throw new HttpError("Enauk already to use", 409, "EMAIL_TAKEN")
+            throw new HttpError("Email already in use", 409, "EMAIL_TAKEN")
         }
 
         const passwordHash = await bcrypt.hash(password, 10)

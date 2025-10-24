@@ -7,8 +7,8 @@ export const authRouter = () => {
      const r = Router()
      const ctrl = makeUserController()
      
-     r.post("/register", validate({ body: registerSchema}, ctrl.register))
-     r.post("/login", validate({ body: loginSchema }, ctrl.login));
+     r.post("/register", validate({ body: registerSchema}), ctrl.register)
+     r.post("/login", validate({ body: loginSchema }), ctrl.login);
      // Protegido dentro do controller (array handler)
      r.get("/me", ctrl.me)
 
