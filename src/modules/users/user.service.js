@@ -25,7 +25,7 @@ export const makeUserService = () => {
         const user = await repo.findByEmail(email)
 
         if (!user) {
-            throw new HttpError("User hnot found", 404, "USER_NOT_FOUND")
+            throw new HttpError("User not found", 404, "USER_NOT_FOUND")
         }
 
         const ok = await bcrypt.compare(password, user.passwordHash)
