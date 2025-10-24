@@ -3,7 +3,7 @@ import { env } from "..config/env.js"
 
 
 export const ensureAuth = (request, _response, next) => {
-    const header = request.headers.Authorization
+    const header = request.headers.authorization
 
     if (!header) {
         return next({
