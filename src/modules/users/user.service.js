@@ -1,7 +1,7 @@
 
-import { env } from "../../config/env"
-import { HttpError } from "../../utils/httpError"
-import { makeUserRepoMemory } from "./user.repo.memory"
+import { env } from "../../config/env.js"
+import { HttpError } from "../../utils/httpError.js"
+import { makeUserRepoMemory } from "./user.repo.memory.js"
 
 export const makeUserService = () => {
     const repo = makeUserRepoMemory()

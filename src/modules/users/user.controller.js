@@ -1,5 +1,5 @@
-import { ensureAuth } from "../../middlewares/auth"
-import { makeUserService } from "./user.service"
+import { ensureAuth } from "../../middlewares/auth.js"
+import { makeUserService } from "./user.service.js"
 
 export const makeUserController = () => {
     const service = makeUserService()
