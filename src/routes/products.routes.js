@@ -2,6 +2,7 @@ import { Router } from "express"
 import { makeProductController } from "../modules/products/products.controller.js"
 import { createProductSchema, listProductsQuery, patchProductSchema, productIdParams } from "../modules/products/product.schemas.js"
 import { ensureAuth } from "../middlewares/auth.js"
+import { validate } from "../middlewares/validate.js"
 
 
 export const ProductRouter = () => {

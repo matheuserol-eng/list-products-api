@@ -20,7 +20,7 @@ export const createApp = () => {
     })
 
     app.use("/auth", authRouter())
-    app.use("/products", ProductRouter)
+    app.use("/products", ProductRouter())
 
    app.use(errorHandler)
 

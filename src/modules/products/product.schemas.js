@@ -9,12 +9,12 @@ export const listProductsQuery = z.object({
     q: z.string().optional(),
     order: z.enum(["id", "name", "price"]).optional(),
     dir: z.enum(["ASC", "DESC"]).optional(),
-    page: z.coerce().number().int().positive().optional(),
-    limit: z.coerce().int().positive().max(100).optional(),
+    page: z.coerce.number().int().positive().optional(),
+    limit: z.coerce.number().int().positive().max(100).optional(),
 })
 
 export const productIdParams = z.object({
-    id: z.coerce().number().int().positive()
+    id: z.coerce.number().int().positive()
 })
 
 export const patchProductSchema = z.object({
